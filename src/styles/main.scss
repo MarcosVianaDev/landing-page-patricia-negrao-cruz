@@ -1,3 +1,19 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#break-point {
+    text-align: center;
+    width: 100vw;
+    opacity: .8;
+}
+footer * {
+    text-decoration: none;
+}
+
 @font-face {
     font-family: 'Coolesta';
     src: url('../fonts/Coolesta.ttf') format('truetype');
@@ -148,6 +164,46 @@ footer * {
 
 .accordion li {
     list-style: square;
+}
+
+#whats_btn {
+    height: 100px;
+    width: 100px;
+    background-color: rgba(0, 128, 0, 0.33);
+
+    position: fixed;
+    right: 2vw;
+    bottom: 2vh;
+
+    transition: all .3s;
+
+    z-index: 100;
+    cursor: pointer;
+
+    i {
+        position: relative;
+        left: 15%;
+        font-size: 4.5em;
+        color: rgba(255, 255, 255, 0.33);
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: rgba(0, 128, 0, 1);
+
+        i {
+            color: white;
+        }
+    }
+
+    @media (max-width: 640px) {
+        height: 75px;
+        width: 75px;
+
+        i {
+            font-size: 3.3em;
+        }
+    }
 }
 /* 
 breakpoints:
